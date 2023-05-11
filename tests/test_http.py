@@ -22,10 +22,16 @@ def test_second_request():
 
 @pytest.mark.http
 def test_status_code_request():
-    r = requests.get("https://api.github.com/users/sergii_butenko")
+    r = requests.get("https://api.github.com/users/maryska_karma")
 
     assert r.status_code == 404    
 
+
+
+@pytest.mark.http
+def test_first_request1():
+    r = requests.get('https://www.kbk.com.ua/')
+    print(f"Response Status code is {r.status_code}")
 
 
     #print(r.text.encode("utf-8"))
